@@ -1,3 +1,4 @@
+import 'package:e_com/utils/constant.dart';
 import 'package:e_com/utils/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -7,9 +8,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String name = '';
-  bool changeButton = false;
-
   final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
@@ -112,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             )

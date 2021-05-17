@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
         primaryTextTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      initialRoute: "/login",
+      initialRoute: "/home",
       routes: {
         MyRoutes.HomeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
