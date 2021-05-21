@@ -1,7 +1,9 @@
 import 'package:e_com/models/catalog.dart';
+import 'package:e_com/utils/routes.dart';
 import 'package:e_com/utils/theme.dart';
 import 'package:e_com/widgets/home_widget/catalog_header.dart';
 import 'package:e_com/widgets/home_widget/catalog_list.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -37,20 +39,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: MyTheme.creamColor,
-          body: Container(
-            padding: Vx.m32,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CatlogHeader(),
-                if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                  CatalogList().py16().expand()
-                else
-                  CircularProgressIndicator().centered().py16().expand(),
-              ],
-            ),
-          )),
+        backgroundColor: MyTheme.creamColor,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, MyRoutes.cartRoute);
+          },
+          backgroundColor: MyTheme.darkBulishColor,
+          child: Icon(CupertinoIcons.cart),
+        ),
+        body: Container(
+          padding: Vx.m32,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CatlogHeader(),
+              if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                CatalogList().py16().expand()
+              else
+                CircularProgressIndicator().centered().py16().expand(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
