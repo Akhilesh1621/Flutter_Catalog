@@ -26,11 +26,15 @@ class MyTheme {
         buttonColor: lightBulishColor,
         accentColor: Colors.white,
         appBarTheme: AppBarTheme(
-            centerTitle: true,
-            color: Colors.black,
-            elevation: 0.0,
-            iconTheme: IconThemeData(color: Colors.white),
-            textTheme: Theme.of(context).textTheme),
+          centerTitle: true,
+          color: Colors.black,
+          elevation: 0.0,
+          iconTheme: IconThemeData(color: Colors.white),
+          textTheme: Theme.of(context).textTheme.copyWith(
+                headline6:
+                    context.textTheme.headline6.copyWith(color: Colors.white),
+              ),
+        ),
         fontFamily: GoogleFonts.poppins().fontFamily,
         primaryTextTheme: GoogleFonts.poppinsTextTheme(),
       );
