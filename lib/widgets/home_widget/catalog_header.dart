@@ -1,4 +1,3 @@
-import 'package:e_com/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
