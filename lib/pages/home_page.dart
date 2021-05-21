@@ -1,6 +1,6 @@
 import 'package:e_com/models/catalog.dart';
 import 'package:e_com/utils/routes.dart';
-import 'package:e_com/utils/theme.dart';
+
 import 'package:e_com/widgets/home_widget/catalog_header.dart';
 import 'package:e_com/widgets/home_widget/catalog_list.dart';
 import 'package:flutter/cupertino.dart';

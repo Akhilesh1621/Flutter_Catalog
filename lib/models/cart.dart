@@ -1,6 +1,12 @@
 import 'package:e_com/models/catalog.dart';
 
 class CartModel {
+  static final cartModel = CartModel._internal();
+
+  CartModel._internal();
+
+  factory CartModel() => cartModel;
+
   // catalog field
   CatalogModel _catalog;
 
@@ -17,10 +23,11 @@ class CartModel {
 
   //get item in cart
 
-  List<Item> get item => _itemIds.map((id) => _catalog.getById(id)).toList();
+  List<Item> get items => _itemIds.map((id) => _catalog.getById(id)).toList();
 
   // get total price
-  num get totalPrice => item.fold(0, (total, current) => total + current.price);
+  num get totalPrice =>
+      items.fold(0, (total, current) => total + current.price);
 
   // add item
 
