@@ -7,11 +7,8 @@ import 'package:e_com/widgets/home_widget/catalog_header.dart';
 import 'package:e_com/widgets/home_widget/catalog_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:velocity_x/velocity_x.dart';
-
-// ################ chapter htttp chapter #############3//
 
 class HomePage extends StatefulWidget {
   @override
